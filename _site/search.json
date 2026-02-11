@@ -2,15 +2,29 @@
   {
     "objectID": "index.html",
     "href": "index.html",
-    "title": "emme-anderson-portfolio",
+    "title": "Emme Anderson",
     "section": "",
-    "text": "This is a Quarto website.\nTo learn more about Quarto websites visit https://quarto.org/docs/websites.\n\n1 + 1\n\n[1] 2"
+    "text": "Emme Anderson is a third year statistics student at California State University, Monterey Bay."
+  },
+  {
+    "objectID": "index.html#education",
+    "href": "index.html#education",
+    "title": "Emme Anderson",
+    "section": "Education",
+    "text": "Education\nCalifornia State University, Monterey Bay — B.S. in Statistics Aug 2023 – May 2027"
+  },
+  {
+    "objectID": "index.html#research-experience",
+    "href": "index.html#research-experience",
+    "title": "Emme Anderson",
+    "section": "Research Experience",
+    "text": "Research Experience\nFaculty Research: Student Success in Math/Stat Courses — CSU Monterey Bay (2025 – Ongoing)\nCommunity Learning Commons Internship – Data Analytics — CSU Monterey Bay (Fall 2024)\nPublished Research: Effects of Expanded Polystyrene on Tenebrio molitor Co-authored peer-reviewed article in Journal of Bio Environment Control (2023)"
   },
   {
     "objectID": "about.html",
     "href": "about.html",
     "title": "About",
     "section": "",
-    "text": "About this site\n\n1 + 1\n\n[1] 2"
+    "text": "I am Emme, a enthusiastic statistics student who is dedicated to learning about data science in investigating the wonders of the world. I love the outdoors as I was born in Truckee, CA and would love to do research on the environment and mother nature."
   }
 ]

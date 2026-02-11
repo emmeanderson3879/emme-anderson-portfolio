@@ -2,4 +2,4 @@
 title: "About"
 ---
 
-Emme Anderson is a third year statistics student at CSUMB.
+I am Emme, a enthusiastic statistics student who is dedicated to learning about data science in investigating the wonders of the world. I love the outdoors as I was born in Truckee, CA and would love to do research on the environment and mother nature.

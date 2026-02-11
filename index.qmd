@@ -1,11 +1,27 @@
 ---
-title: "emme-anderson-portfolio"
+title: "Emme Anderson"
+about:
+  template: jolla
+  image: profile_photo.jpg
+  links:
+    - icon: linkedin
+      text: LinkedIn
+      href: https://www.linkedin.com/in/emme-anderson-383870383/
+    - icon: github
+      text: Github
+      href: https://github.com/emmeanderson3879
 ---
 
-This is a Quarto website.
+Emme Anderson is a third year statistics student at California State University, Monterey Bay.
 
-To learn more about Quarto websites visit <https://quarto.org/docs/websites>.
+## Education
 
-```{r}
-1 + 1
-```
+California State University, Monterey Bay — B.S. in Statistics Aug 2023 – May 2027
+
+## Research Experience
+
+Faculty Research: Student Success in Math/Stat Courses — CSU Monterey Bay (2025 – Ongoing)
+
+Community Learning Commons Internship – Data Analytics — CSU Monterey Bay (Fall 2024)
+
+Published Research: Effects of Expanded Polystyrene on Tenebrio molitor Co-authored peer-reviewed article in Journal of Bio Environment Control (2023)
