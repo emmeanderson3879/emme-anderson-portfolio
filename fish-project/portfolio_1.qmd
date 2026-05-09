@@ -1,0 +1,151 @@
+---
+title: "Fish Stocked in the Great Lakes"
+format:
+  html:
+    toc: true
+execute:
+  echo: false
+  warning: false
+  message: false
+---
+
+## Data Description
+
+1.  The source of the data is from the Tidy Tuesday package that has data on fish stocking in the Great Lakes found from the Great Lakes Fishery Commission 1867-2015.
+2.  The data includes variables such as the year, month, lake, species, state, and number of fish stocked.
+3.  The research questions I would like to address includes Has the number of fish stocked changed over the years and is there a seasonal difference? The second question is Which lakes get stocked the most and do the species of fish differ by each lake?
+
+## Data Visualization
+
+I want my final visualizations to show the trends over time using a line plot and highlight each of the seasons using different lines. I would like another visualization to show the number of fish stocked for each lake using something like a bar chart that highlights each of the species types.
+
+## Data Cleaning
+
+1.  I need to create a season variable by grouping the months into each of the 4 seasons.
+2.  I need to remove a couple of variables that I am not interested in.
+3.  I would also need to filter out the N/A values that are missing in the months variable for when I am creating seasons.
+
+
+```{r}
+#| label: load-packages
+#| message: false
+#| echo: false
+#| warning: false
+#| include: false
+
+library(janitor)
+library(tidyverse)
+library(plotly)
+library(fishpals)
+```
+
+```{r}
+#| label: read-data
+#| message: false
+#| warning: false
+#| echo: false
+#| include: false
+
+stocked <- readr::read_csv(
+  "https://raw.githubusercontent.com/rfordatascience/tidytuesday/main/data/2021/2021-06-08/stocked.csv",
+  show_col_types = FALSE
+)
+
+stocked <- janitor::clean_names(stocked)
+
+my_theme <- function() {
+  list(
+    theme_bw(),
+    scale_color_fishpals("adultchinook", discrete = TRUE),
+    scale_fill_fishpals("adultchinook", discrete = TRUE)
+  )
+}
+```
+
+```{r}
+#| label: clean-data
+#| message: false
+#| warning: false
+#| echo: false
+#| include: false
+
+stocked_clean <- stocked |>
+  filter(!is.na(month), year > 1980) |>
+  mutate(
+    season = case_when(
+      month %in% c(12, 1, 2) ~ "Winter",
+      month %in% c(3, 4, 5) ~ "Spring",
+      month %in% c(6, 7, 8) ~ "Summer",
+      month %in% c(9, 10, 11) ~ "Fall"
+    )
+  ) |>
+  select(year, month, lake, no_stocked, species, season) |>
+  group_by(lake) |>
+  mutate(total_no_stocked = sum(no_stocked, na.rm = TRUE),
+         total_stocked_mill = total_no_stocked / 1000000,
+         total_stocked_k = total_no_stocked / 1000) |>
+  ungroup() 
+
+stocked_clean <- stocked_clean |>
+  mutate(species_group = case_when(
+    species %in% c("RBT", "LAT", "BNT", "BKT", "SPE") ~ "Trout",
+    species %in% c("CHS", "COS", "ATS")                ~ "Salmon",
+    species == "WAE"                                    ~ "Walleye",
+    species == "MUE"                                    ~ "Muskellunge",
+    species == "YEP"                                    ~ "Yellow Perch",
+    .default = "Other"
+  ))
+
+```
+
+
+```{r}
+#| label: fish-stock-lake
+#| message: false
+#| warning: false
+#| echo: false
+
+
+stocked_clean |>
+  summarise(total = sum(no_stocked), .by = c(lake, species_group)) |>
+  ggplot(aes(x = reorder(lake, -total, sum), y = total / 1e6, fill = species_group)) +
+  geom_bar(stat = "identity") +
+  labs(
+    title = "Total Fish Stocked by Lake and Species Group",
+    x = "Lake",
+    y = "Total Fish Stocked (millions)",
+    fill = "Species Group"
+  ) +
+  my_theme()
+```
+
+```{r}
+#| label: stock-years
+#| message: false
+#| warning: false
+#| echo: false
+
+stocked_clean |>
+  summarise(total = sum(no_stocked), .by = c(year, season)) |>
+  ggplot(aes(x = year, y = total / 1e6, color = season)) +
+  geom_line() +
+  labs(
+    title = "Fish Stocked Over the Years by Season",
+    x = "Year",
+    y = "Total Fish Stocked (millions)",
+    color = "Season"
+  ) +
+  my_theme()
+```
+
+
+
+
+
+
+
+
+
+
+
+

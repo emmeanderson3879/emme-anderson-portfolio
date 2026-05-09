@@ -2,7 +2,7 @@
 title: "Emme Anderson"
 about:
   template: jolla
-  image: profile_photo.jpg
+  image: profile_photo1.jpeg
   links:
     - icon: linkedin
       text: LinkedIn
