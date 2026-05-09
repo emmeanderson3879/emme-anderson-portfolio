@@ -32,14 +32,14 @@
     "href": "fish-project/portfolio_1.html",
     "title": "Fish Stocked in the Great Lakes",
     "section": "",
-    "text": "The source of the data is from the Tidy Tuesday package that has data on fish stocking in the Great Lakes found from the Great Lakes Fishery Commission 1867-2015.\nThe data includes variables such as the year, month, lake, species, state, and number of fish stocked.\nThe research questions I would like to address includes Has the number of fish stocked changed over the years and is there a seasonal difference? The second question is Which lakes get stocked the most and do the species of fish differ by each lake?"
+    "text": "The source of the data is from the Tidy Tuesday package that has data on fish stocking in the Great Lakes found from the Great Lakes Fishery Commission 1867-2015.\nThe data includes variables such as the year, month, lake, species, state, and number of fish stocked.\nThe research questions I would like to address includes Which lakes get stocked the most and do the species of fish differ by each lake? The second question is Has the number of fish stocked changed over the years and is there a seasonal difference?"
   },
   {
     "objectID": "fish-project/portfolio_1.html#data-description",
     "href": "fish-project/portfolio_1.html#data-description",
     "title": "Fish Stocked in the Great Lakes",
     "section": "",
-    "text": "The source of the data is from the Tidy Tuesday package that has data on fish stocking in the Great Lakes found from the Great Lakes Fishery Commission 1867-2015.\nThe data includes variables such as the year, month, lake, species, state, and number of fish stocked.\nThe research questions I would like to address includes Has the number of fish stocked changed over the years and is there a seasonal difference? The second question is Which lakes get stocked the most and do the species of fish differ by each lake?"
+    "text": "The source of the data is from the Tidy Tuesday package that has data on fish stocking in the Great Lakes found from the Great Lakes Fishery Commission 1867-2015.\nThe data includes variables such as the year, month, lake, species, state, and number of fish stocked.\nThe research questions I would like to address includes Which lakes get stocked the most and do the species of fish differ by each lake? The second question is Has the number of fish stocked changed over the years and is there a seasonal difference?"
   },
   {
     "objectID": "fish-project/portfolio_1.html#data-visualization",
@@ -54,5 +54,33 @@
     "title": "Fish Stocked in the Great Lakes",
     "section": "Data Cleaning",
     "text": "Data Cleaning\n\nI need to create a season variable by grouping the months into each of the 4 seasons.\nI need to remove a couple of variables that I am not interested in.\nI would also need to filter out the N/A values that are missing in the months variable for when I am creating seasons."
+  },
+  {
+    "objectID": "fish-project/portfolio_1.html#fish-stock-by-lake-and-species",
+    "href": "fish-project/portfolio_1.html#fish-stock-by-lake-and-species",
+    "title": "Fish Stocked in the Great Lakes",
+    "section": "Fish Stock By Lake and Species",
+    "text": "Fish Stock By Lake and Species\n\n\n\n\n\nMichigan and Ontario had the highest total fish stocked from 1980–2015, with trout dominating across most lakes. Lake Erie stood out for its relatively higher proportion of walleye."
+  },
+  {
+    "objectID": "fish-project/portfolio_1.html#fish-stock-over-time-by-season",
+    "href": "fish-project/portfolio_1.html#fish-stock-over-time-by-season",
+    "title": "Fish Stocked in the Great Lakes",
+    "section": "Fish Stock Over Time by Season",
+    "text": "Fish Stock Over Time by Season"
+  },
+  {
+    "objectID": "fish-project/portfolio_1.html#visualization-1",
+    "href": "fish-project/portfolio_1.html#visualization-1",
+    "title": "Fish Stocked in the Great Lakes",
+    "section": "Visualization 1",
+    "text": "Visualization 1\n\n\n\n\n\nMichigan and Ontario had the highest total fish stocked from 1980–2015, with trout dominating across most lakes. Across all lakes, the species Salmon, Trout, and Walleye were stocked the most."
+  },
+  {
+    "objectID": "fish-project/portfolio_1.html#visualization-2",
+    "href": "fish-project/portfolio_1.html#visualization-2",
+    "title": "Fish Stocked in the Great Lakes",
+    "section": "Visualization 2",
+    "text": "Visualization 2\n\n\n\n\n\nFish stocking in the Great Lakes peaked around the mid-1980s and declined through 2015. Spring stocking consistently outpaced summer, fall, and winter across the entire period."
   }
 ]
